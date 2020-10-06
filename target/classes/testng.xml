@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="My Suite">
+    <test name="MobileAppTest">
+        <classes>
+
+
+            <!-- Registration-->
+            <class name="com.qa.test.Registration">
+                    <methods>
+                        <include name="registration"/>
+                    </methods>
+            </class>
+
+
+            <class name="com.qa.support.SendReport">
+                <methods>
+                    <include name="sendReportMail"/>
+                </methods>
+
+            </class>
+
+
+
+
+        </classes>
+    </test>
+</suite>

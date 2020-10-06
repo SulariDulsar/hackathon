@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="My Suite" duration-ms="14248" started-at="2020-10-06T12:39:11 MYT" finished-at="2020-10-06T12:39:25 MYT">
+    <groups>
+    </groups>
+    <test name="MobileAppTest" duration-ms="14248" started-at="2020-10-06T12:39:11 MYT" finished-at="2020-10-06T12:39:25 MYT">
+      <class name="com.qa.support.SendReport">
+        <test-method status="PASS" signature="sendReportMail()[pri:0, instance:com.qa.support.SendReport@69b2283a]" name="sendReportMail" is-config="true" duration-ms="15874" started-at="2020-10-06T12:39:25 MYT" finished-at="2020-10-06T12:39:41 MYT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sendReportMail -->
+      </class> <!-- com.qa.support.SendReport -->
+      <class name="com.qa.test.Registration">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.test.Registration@78b66d36]" name="setUp" is-config="true" duration-ms="4823" started-at="2020-10-06T12:39:11 MYT" finished-at="2020-10-06T12:39:16 MYT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="registration()[pri:0, instance:com.qa.test.Registration@78b66d36]" name="registration" duration-ms="9409" started-at="2020-10-06T12:39:16 MYT" finished-at="2020-10-06T12:39:25 MYT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registration -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.test.Registration@78b66d36]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-10-06T12:39:25 MYT" finished-at="2020-10-06T12:39:25 MYT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.qa.test.Registration -->
+    </test> <!-- MobileAppTest -->
+  </suite> <!-- My Suite -->
+</testng-results>
