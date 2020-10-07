@@ -34,20 +34,30 @@ public class Registration extends Base {
         test = Report.getInstance().getReportTest("Registration.registration","Registration with email");
 
         try {
-             RegistrationElement.registerLink(androidDriver).click();
-             ImplicitWait.sleepFor(1000);
 
-             RegistrationElement.registrationNameTxt(androidDriver).sendKeys(TestData.getSafeString("name"));
-             ImplicitWait.sleepFor(1000);
+            //Registration page verification
+             RegistrationElement.registerLink(androidDriver).click();
+             ImplicitWait.sleepFor(2000);
+
+            try {
+                Assert.assertTrue(RegistrationElement.registrationNameTxt(androidDriver).isDisplayed());
+                Report.getInstance().getResultStatus(LogStatus.PASS,"Verify registration page","Navigate to Registration page successful",test);
+            } catch (Exception e) {
+                Report.getInstance().getResultStatus(LogStatus.FAIL, "Verify registration page", "Navigate to Registration page got failed", test);
+                Report.getInstance().getResultStatus(LogStatus.ERROR, "Error  :", e.getMessage(), test);
+            }
+
+                RegistrationElement.registrationNameTxt(androidDriver).sendKeys(TestData.getSafeString("name"));
+             ImplicitWait.sleepFor(2000);
 
              RegistrationElement.registrationEmailTxt(androidDriver).sendKeys(TestData.getSafeString("email"));
-             ImplicitWait.sleepFor(1000);
+             ImplicitWait.sleepFor(2000);
 
              RegistrationElement.registrationPasswordTxt(androidDriver).sendKeys(TestData.getSafeString("password"));
-             ImplicitWait.sleepFor(1000);
+             ImplicitWait.sleepFor(2000);
 
              RegistrationElement.registrationConfirmPasswordTxt(androidDriver).sendKeys(TestData.getSafeString("confirmPassword"));
-             ImplicitWait.sleepFor(1000);
+             ImplicitWait.sleepFor(2000);
 
             //Page scroll
             try {

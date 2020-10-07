@@ -2,40 +2,40 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="My Suite" duration-ms="26409" started-at="2020-10-07T12:30:36 MYT" finished-at="2020-10-07T12:31:02 MYT">
+  <suite name="My Suite" duration-ms="34832" started-at="2020-10-07T13:46:25 MYT" finished-at="2020-10-07T13:47:00 MYT">
     <groups>
     </groups>
-    <test name="MobileAppTest" duration-ms="26409" started-at="2020-10-07T12:30:36 MYT" finished-at="2020-10-07T12:31:02 MYT">
+    <test name="MobileAppTest" duration-ms="34832" started-at="2020-10-07T13:46:25 MYT" finished-at="2020-10-07T13:47:00 MYT">
       <class name="com.qa.support.SendReport">
-        <test-method status="PASS" signature="sendReportMail()[pri:0, instance:com.qa.support.SendReport@6fe7aac8]" name="sendReportMail" is-config="true" duration-ms="15614" started-at="2020-10-07T12:31:02 MYT" finished-at="2020-10-07T12:31:18 MYT">
+        <test-method status="PASS" signature="sendReportMail()[pri:0, instance:com.qa.support.SendReport@6fe7aac8]" name="sendReportMail" is-config="true" duration-ms="15288" started-at="2020-10-07T13:47:00 MYT" finished-at="2020-10-07T13:47:15 MYT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sendReportMail -->
       </class> <!-- com.qa.support.SendReport -->
       <class name="com.qa.test.Login">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.test.Login@bef2d72]" name="setUp" is-config="true" duration-ms="0" started-at="2020-10-07T12:30:53 MYT" finished-at="2020-10-07T12:30:53 MYT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="login()[pri:0, instance:com.qa.test.Login@bef2d72]" name="login" duration-ms="7641" started-at="2020-10-07T12:30:53 MYT" finished-at="2020-10-07T12:31:01 MYT">
+        <test-method status="PASS" signature="login()[pri:0, instance:com.qa.test.Login@bef2d72]" name="login" duration-ms="10076" started-at="2020-10-07T13:46:49 MYT" finished-at="2020-10-07T13:46:59 MYT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.test.Login@bef2d72]" name="tearDown" is-config="true" duration-ms="1001" started-at="2020-10-07T12:31:01 MYT" finished-at="2020-10-07T12:31:02 MYT">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.test.Login@bef2d72]" name="setUp" is-config="true" duration-ms="0" started-at="2020-10-07T13:46:49 MYT" finished-at="2020-10-07T13:46:49 MYT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.test.Login@bef2d72]" name="tearDown" is-config="true" duration-ms="1004" started-at="2020-10-07T13:46:59 MYT" finished-at="2020-10-07T13:47:00 MYT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.qa.test.Login -->
       <class name="com.qa.test.Registration">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.test.Registration@5223e5ee]" name="setUp" is-config="true" duration-ms="4878" started-at="2020-10-07T12:30:36 MYT" finished-at="2020-10-07T12:30:40 MYT">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.test.Registration@5223e5ee]" name="setUp" is-config="true" duration-ms="6001" started-at="2020-10-07T13:46:25 MYT" finished-at="2020-10-07T13:46:31 MYT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="registration()[pri:0, instance:com.qa.test.Registration@5223e5ee]" name="registration" duration-ms="11866" started-at="2020-10-07T12:30:40 MYT" finished-at="2020-10-07T12:30:52 MYT">
+        <test-method status="PASS" signature="registration()[pri:0, instance:com.qa.test.Registration@5223e5ee]" name="registration" duration-ms="16728" started-at="2020-10-07T13:46:31 MYT" finished-at="2020-10-07T13:46:48 MYT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registration -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.test.Registration@5223e5ee]" name="tearDown" is-config="true" duration-ms="1003" started-at="2020-10-07T12:30:52 MYT" finished-at="2020-10-07T12:30:53 MYT">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.test.Registration@5223e5ee]" name="tearDown" is-config="true" duration-ms="1005" started-at="2020-10-07T13:46:48 MYT" finished-at="2020-10-07T13:46:49 MYT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

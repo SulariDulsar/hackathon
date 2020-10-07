@@ -36,7 +36,11 @@ public class Report {
         //To add system or environment info by using the addSystemInfo method.
         extent.addSystemInfo("Environment", Configuration.getSafeString("reportEnvironment"));
         extent.addSystemInfo("Created By", Configuration.getSafeString("reportOwner"));
-
+        extent.addSystemInfo("Selenium Java Version", Configuration.getSafeString("seleniumJavaVersion"));
+        extent.addSystemInfo("Appium Java Version", Configuration.getSafeString("appiumJavaVersion"));
+        extent.addSystemInfo("Appium Server Version", Configuration.getSafeString("appiumServerVersion"));
+        extent.config().reportName(Configuration.getSafeString("reportName"));
+        extent.config().reportHeadline(Configuration.getSafeString("reportHeadline"));
     }
 
     public static Report getInstance() {

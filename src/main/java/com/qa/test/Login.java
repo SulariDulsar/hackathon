@@ -39,14 +39,25 @@ public class Login {
 
         try {
 
+            //Click on login page
             LoginElement.loginLink(androidDriver).click();
-            ImplicitWait.sleepFor(1000);
+            ImplicitWait.sleepFor(2000);
+
+            try {
+                Assert.assertTrue(LoginElement.loginEmailTxt(androidDriver).isDisplayed());
+                Report.getInstance().getResultStatus(LogStatus.PASS,"Verify login page","Navigate to login page successful",test);
+
+            } catch (Exception e) {
+                Report.getInstance().getResultStatus(LogStatus.FAIL, "Verify login page ", "Navigate to login page failed", test);
+                Report.getInstance().getResultStatus(LogStatus.ERROR, "Error  :", e.getMessage(), test);
+
+            }
 
             LoginElement.loginEmailTxt(androidDriver).sendKeys(TestData.getSafeString("email"));
-            ImplicitWait.sleepFor(1000);
+            ImplicitWait.sleepFor(2000);
 
             LoginElement.loginPasswordTxt(androidDriver).sendKeys(TestData.getSafeString("password"));
-            ImplicitWait.sleepFor(1000);
+            ImplicitWait.sleepFor(2000);
 
             //Screen shot before Login
             imageDetails = Report.getInstance().addScreenShotToReport(androidDriver,test);
