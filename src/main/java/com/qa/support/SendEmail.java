@@ -7,8 +7,7 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
-import java.util.Date;
-import java.util.Properties;
+import java.util.*;
 
 public class SendEmail {
     private static SendEmail self;
@@ -53,9 +52,15 @@ public class SendEmail {
             Message msg = new MimeMessage(session);
 
             msg.setFrom(new InternetAddress(userName));
-            InternetAddress[] toAddresses = {
-                    new InternetAddress(Configuration.getSafeString("receiverEmail")),
-            };
+            String[] emails = Configuration.getSafeString("receiverEmail").split(",");
+            List<String> emailList = Arrays.asList(emails);
+
+            InternetAddress[] toAddresses = new InternetAddress[emailList.size()];
+            for (int i = 0; i < emailList.size(); i++) {
+                System.out.println("Recipient[" + i + "]  " +emailList.get(i));
+                toAddresses[i] = new InternetAddress(emailList.get(i));
+            }
+
             msg.setRecipients(Message.RecipientType.TO, toAddresses);
             msg.setSubject("Hackathon Automation Result");
             msg.setSentDate(new Date());

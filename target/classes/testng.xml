@@ -12,6 +12,12 @@
                     </methods>
             </class>
 
+            <class name="com.qa.test.Login">
+                <methods>
+                    <include name="login"/>
+                </methods>
+            </class>
+
 
             <class name="com.qa.support.SendReport">
                 <methods>

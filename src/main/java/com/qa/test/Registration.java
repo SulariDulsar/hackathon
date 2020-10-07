@@ -2,10 +2,7 @@ package com.qa.test;
 
 import com.qa.app.Base;
 import com.qa.element.RegistrationElement;
-import com.qa.support.ImplicitWait;
-import com.qa.support.Report;
-import com.qa.support.ReturnMultipleValues;
-import com.qa.support.ScreenRead;
+import com.qa.support.*;
 import com.qa.util.TestData;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -20,6 +17,7 @@ public class Registration extends Base {
     AndroidDriver<AndroidElement> androidDriver;
     ExtentTest test;
     ReturnMultipleValues imageDetails  = null;
+    String image;
 
     @BeforeClass
     public void setUp() throws Exception {
@@ -28,13 +26,13 @@ public class Registration extends Base {
 
     @AfterClass
     public void tearDown() throws Exception {
-        //ImplicitWait.sleepFor(1000);
+        ImplicitWait.sleepFor(1000);
     }
 
     @Test(priority = 0)
     public void registration(){
         test = Report.getInstance().getReportTest("Registration.registration","Registration with email");
-        String image;
+
         try {
              RegistrationElement.registerLink(androidDriver).click();
              ImplicitWait.sleepFor(1000);
@@ -51,15 +49,23 @@ public class Registration extends Base {
              RegistrationElement.registrationConfirmPasswordTxt(androidDriver).sendKeys(TestData.getSafeString("confirmPassword"));
              ImplicitWait.sleepFor(1000);
 
+            //Page scroll
+            try {
+                PageScroll.PageScrollUp(androidDriver);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
             //Screen shot before SignUp
              imageDetails = Report.getInstance().addScreenShotToReport(androidDriver,test);
              Report.getInstance().getResultStatus(LogStatus.INFO,"Before SignUp Page",imageDetails.getImageString(),test);
 
+             //Click on registration button
              RegistrationElement.registrationBtn(androidDriver).click();
              ImplicitWait.sleepFor(1000);
 
             //Screen shot after SignUp
-            String screenText = null;
+            //String screenText = null;
             imageDetails = Report.getInstance().addScreenShotToReport(androidDriver,test);
 
             /*try {
@@ -84,7 +90,7 @@ public class Registration extends Base {
                 Report.getInstance().getResultStatus(LogStatus.ERROR,"Error  :",e.getMessage(),test);
 
             }catch (AssertionError e) {
-                Report.getInstance().getResultStatus(LogStatus.FAIL,"Verify successful registration message","Registration message different",test);
+                Report.getInstance().getResultStatus(LogStatus.FAIL,"Verify successful registration","Registration got failed",test);
                 Report.getInstance().getResultStatus(LogStatus.INFO,"After registration",imageDetails.getImageString(),test);
                 Report.getInstance().getResultStatus(LogStatus.ERROR,"Error  ",e.getMessage(),test);
             }
@@ -93,6 +99,7 @@ public class Registration extends Base {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
 
         Report.getInstance().endReportTest(test);
     }

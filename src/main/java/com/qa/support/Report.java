@@ -28,13 +28,10 @@ public class Report {
 
         try {
                 extent = new ExtentReports(reportPath);
-
-                System.out.println("-----------------------");
         } catch (Exception e) {
             System.out.println(e.getMessage());
             e.printStackTrace();
         }
-        System.out.println("!!!!!!!!!!!");
 
         //To add system or environment info by using the addSystemInfo method.
         extent.addSystemInfo("Environment", Configuration.getSafeString("reportEnvironment"));
